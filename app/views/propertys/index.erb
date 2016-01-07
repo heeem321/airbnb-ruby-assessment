@@ -1,0 +1,5 @@
+<p> All Property Listings Here </p>
+<% @properties.each do |property| %>
+	<a href="/properties/<%= property.id%>"><%= property.p_name %></a>
+	<%=Property.first.user.first_name %>
+<% end %>

@@ -1,6 +1,9 @@
-<form method=post action="/propertys/edit">
-	<input type=text placeholder="Enter Property ID" name="id"><br>
+<%= @property.p_name %>
+
+<form method=post action="/properties/<%= @property.id %>">
+<!-- 	<input type=text placeholder="Enter Property ID" name="id"><br> -->
 	<input type=text placeholder="Enter Property Name" name="p_name"><br>
 	<input type=text placeholder="Enter Property Description" name="desc"><br>
+	<input type=hidden name=_method value="patch" >
 	<input type=submit value="Submit">
 </form>

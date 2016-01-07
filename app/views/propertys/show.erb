@@ -1,0 +1,8 @@
+<%=@property.p_name %> 
+
+	<button><a href="/properties/<%=@property.id%>/edit">Edit</a></button>
+
+	<form method=post action="/properties/<%= @property.id %>">
+	<input type=hidden name=_method value="delete" >
+	<input type=submit value="Delete">
+</form>
