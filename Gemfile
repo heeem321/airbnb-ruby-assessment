@@ -24,6 +24,10 @@ gem 'rake'
 # Adding rspec for running unit testing
 gem 'rspec'
 
+#Adding bcrypt to encrypt passwords and save them to database
+gem 'byebug'
+gem 'bcrypt'
+
 group :development, :test do
 	# Adding shotgun for local web hosting
 	gem 'shotgun'

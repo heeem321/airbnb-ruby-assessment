@@ -1,0 +1,30 @@
+	<% @properties.each do |url|%>
+<tr>
+		Name:<%=url.id %> <td><%= url.p_name %></td><br>
+		Description: <td><%= url.description %></td><br>
+		<br><br>
+
+		<form method=post action="/comments/<%= url.id %>/create">
+		<input type=text placeholder="Comment Here!" name="text"><br>
+		<input type=submit value="Submit">
+		</form>
+		<button><a href="/comments/<%= url.id %>/show">Show Comments</a></button>
+		<br><br>
+
+		<form method=post action="/comments/edit">
+		<input type=text placeholder="Updated Comment" name="newcomment"><br>
+			Which comment do you want to change
+		<input type=text placeholder="Comment id!" name="id"><br>
+		<input type=submit value="Submit">
+		</form>
+		<br><br>
+
+		<form method=post action="/comments/destroy">
+		<input type=text placeholder="which comment do u want to delete" name="id"><br>
+		<input type=submit value="Submit">
+		</form>
+		<br><br>
+
+		<button type="submit"><a href="/bookings/<%= url.id %>/new">Create Booking</a></button>
+</tr>
+<% end %>

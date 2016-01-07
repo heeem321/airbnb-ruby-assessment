@@ -1,2 +1,15 @@
-<h1>Hello World</h1>
-<p>See Me in views/static/index.html.erb</p>
+<h1>AirBnb</h1>
+<p>Your Login Status is : <%= logged_in? %></p>
+
+<button type="button"><a href="/sessions/new">Login</a></button>
+<button type="button"><a href="/users/new">Signup</a></button>
+<br>
+<form method=post action=/sessions/end>
+<button type="submit">Sign Out</button>
+</form>
+<br><br>
+<button type="submit"><a href="property/new">Create Property</a></button>
+<button type="submit"><a href="propertys/view/">View My Property</a></button>
+<button type="submit"><a href="propertys/edit/">Edit My Property</a></button>
+<button type="submit"><a href="propertys/destory/">Delete My Property</a></button>
+<br><br>
